@@ -1,0 +1,33 @@
+GETEVENT:
+
+The 'GetEvent' instruction retrives the event that made the module execute. The possible values are:
+
+-1		Call*
+0		Click
+1		MouseDown
+2		MouseUp
+3		Change
+4		KeyPress
+5		DblClick
+
+* The module was called by the code, i.e. a function call or similar.
+
+
+MESSAGE:
+
+This is pretty much like 'Msgbox' in Visual Basic. Works like this:
+
+Message <text> <type> <title>
+
+<text>: string-type expression. It is the text you want to show.
+<type>: must be one of these:
+
+nrm: no icon is shown
+inf: information icon is shown
+qst: question icon is shown
+exc: exclamation icon is shown
+cri: critical icon is shown
+
+<title>: string-type expression. Title of the window.
+
+You cannot either specify the buttons that will appear (always OK) or retrieve which button was pressed (since it's always OK).
